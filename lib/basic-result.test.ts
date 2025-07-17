@@ -1,4 +1,4 @@
-import { all, convertToError, Err, Ok } from './main';
+import { all, convertToError, Err, Ok } from './basic-result';
 import type { Result } from './types';
 
 describe('convertToError', () => {

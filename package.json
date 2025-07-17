@@ -1,7 +1,7 @@
 {
   "name": "basic-result",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "description": "A simple to use result pattern",
   "author": "Michael Bozhilov <michaelbozhilov@gmail.com> (https://asynchroza.com)",

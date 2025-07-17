@@ -1,35 +1,4 @@
-import { Err, Ok, ResolvedOkResults, Result } from "./types";
+import type { ErrType, OkType, Result } from "./types";
+import { all, Ok, Err, convertToError } from "./basic-result";
 
-export function convertToError(e: unknown) {
-    return e instanceof Error ? e : new Error(String(e));
-}
-
-export function Ok<TValue>(value: TValue): Ok<TValue> {
-    return { ok: true, value };
-}
-
-export function Err<TError>(error: TError): Err<TError> {
-    return { ok: false, error };
-}
-
-async function throwOnFailure<T>(value: Promise<Result<T>>): Promise<Ok<T>['value']> {
-    const result = await value;
-
-    if (!result.ok) {
-        throw result.error;
-    }
-
-    return result.value;
-}
-
-export async function all<T extends readonly Promise<Result<unknown>>[]>(
-    values: T,
-): Promise<Result<ResolvedOkResults<T>>> {
-    try {
-        const result = (
-            await Promise.all(values.map((value) => throwOnFailure(value)))) as ResolvedOkResults<T>;
-        return Ok(result);
-    } catch (e) {
-        return Err(convertToError(e));
-    }
-}
+export { Ok, OkType, Err, ErrType, Result, all, convertToError };
