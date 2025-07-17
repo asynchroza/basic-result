@@ -22,7 +22,7 @@ async function throwOnFailure<T>(value: Promise<Result<T>>): Promise<OkType<T>['
     return result.value;
 }
 
-export async function all<T extends readonly Promise<Result<unknown>>[]>(
+export async function all<T extends readonly Promise<Result<unknown>>[] | []>(
     values: T,
 ): Promise<Result<ResolvedOkResults<T>>> {
     try {
