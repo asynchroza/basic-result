@@ -2,8 +2,6 @@
 
 **Basic Result** is a lightweight utility for improving runtime safety by standardizing error handling through a simple `Result` pattern. Inspired by languages like Rust, this pattern avoids exceptions by explicitly modeling both success and failure.
 
----
-
 ## 🚀 Features
 
 * Consistent handling of asynchronous and synchronous errors
@@ -11,15 +9,11 @@
 * Composable with utilities like `all(...)` for aggregating multiple results
 * Fully type-safe and lightweight
 
----
-
 ## 📦 Installation
 
 ```bash
 npm install basic-result
 ```
-
----
 
 ## ✨ Usage
 
@@ -49,8 +43,6 @@ export async function getGithubProfile(
 }
 ```
 
----
-
 ### 2. Handle the result
 
 You can now consume your function without `try/catch`:
@@ -68,8 +60,6 @@ async function main() {
   }
 }
 ```
-
----
 
 ### 3. Execute multiple `Result`-returning functions in parallel
 
@@ -94,13 +84,11 @@ async function main() {
   }
 }
 ```
----
 
 ## 🛠️ Contributing
 
 Pull requests and improvements are welcome! Feel free to open issues for ideas or bugs.
 
----
 
 ## 📄 License
 
