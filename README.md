@@ -1,6 +1,6 @@
 # 🧱 Basic Result
 
-**Basic Result** is a lightweight utility for improving runtime safety by standardizing error handling through a simple `Result` pattern. Inspired by languages like Rust, this pattern avoids exceptions by explicitly modeling both success and failure.
+Basic Result is a minimalistic utility designed to improve runtime safety by standardizing error handling using a simple Result pattern. While inspired by Rust, it deliberately avoids functional composability in favor of a simple and straightforward imperative approach.
 
 ## 🚀 Features
 
