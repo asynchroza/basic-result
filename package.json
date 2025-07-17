@@ -1,10 +1,16 @@
 {
-  "name": "simple-result",
-  "private": true,
+  "name": "basic-result",
+  "private": false,
   "version": "0.0.1",
   "type": "module",
-  "main": "./dist/simple-result.umd.js",
-  "module": "./dist/simple-result.js",
+  "description": "A simple to use result pattern",
+  "author": "Michael Bozhilov <michaelbozhilov@gmail.com> (https://asynchroza.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asynchroza/basic-result.git"
+  },
+  "main": "./dist/basic-result.umd.js",
+  "module": "./dist/basic-result.js",
   "types": "./dist/types/main.d.ts",
   "scripts": {
     "build": "vite build",

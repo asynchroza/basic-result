@@ -9,8 +9,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'lib/main.ts'),
-      name: 'simple-result',
-      fileName: 'simple-result',
+      name: 'basic-result',
+      fileName: 'basic-result',
     },
     rollupOptions: {
       external: [],
